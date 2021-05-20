@@ -51,18 +51,7 @@ resource "aws_security_group" "web" {
       prefix_list_ids = []
       self = false
       security_groups = []
-    }, 
-    {
-        cidr_blocks = [ "0.0.0.0/0" ]
-        description = "Allow PORT https"
-        from_port = 443
-        to_port = 443
-        protocol = "tcp"
-        ipv6_cidr_blocks = []
-        prefix_list_ids = []
-        self = false
-        security_groups = []
-    } 
+    }
   ]
 
   egress = [
